@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title> 2 PIC 1 WORD </title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 Pics 1 Word Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        img {
+            max-width: 15%;
+            height: auto;
+        }
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>2 Pics 1 Word Game</h1>
+    <p><h3><strong>"Dont Use Capital Letters!"</strong></h3>
+    
+    <div id="container">
+        <img src="voll.jpg" alt="Image 1">
+        <p>
+        <img src="335891352_169239079307971_2534614518077628805_n.jpg" alt="Image 2">
+        <p>
+        <input type="text" id="answer" placeholder="Enter your answer">
+        <button onclick="checkAnswer()">Check Answer</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        const correctAnswer = "putok"; // correct answer
+
+        function checkAnswer() {
+            const userAnswer = document.getElementById("answer").value.trim().toLowerCase();
+            const resultElement = document.getElementById("result");
+
+            if (userAnswer === correctAnswer) {
+                resultElement.textContent = "Correct!";
+            } else {
+                resultElement.textContent = "Incorrect. Try again.";
+            }
+        }
+    </script>
+</body>
+</html>
